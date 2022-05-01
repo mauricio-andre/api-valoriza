@@ -1,0 +1,25 @@
+@host = http://localhost:3000/users
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5EdWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTE0MjAwNTcsImV4cCI6MTY1MTUwNjQ1Nywic3ViIjoiMjBjZGE5NzgtOWM0Ny00NjJhLWFiNjgtMjIyYTg3NjI0ODIwIn0.fSKAyoZOktFtAdGG8Jiuypx8O_XQ7zzqhJ0nH9dryrw
+
+### Create user
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John Due",
+  "email": "johnDue@example.com",
+  "password": "123456",
+  "admin": true
+}
+
+### List users
+GET {{host}} HTTP/1.1
+Authorization: {{token}}
+
+### List compliments receiver
+GET {{host}}/compliments/receive HTTP/1.1
+Authorization: {{token}}
+
+### List compliments send
+GET {{host}}/compliments/send HTTP/1.1
+Authorization: {{token}}

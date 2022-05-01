@@ -1,0 +1,11 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5EdWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTE0MjAwNTcsImV4cCI6MTY1MTUwNjQ1Nywic3ViIjoiMjBjZGE5NzgtOWM0Ny00NjJhLWFiNjgtMjIyYTg3NjI0ODIwIn0.fSKAyoZOktFtAdGG8Jiuypx8O_XQ7zzqhJ0nH9dryrw
+
+POST http://localhost:3000/compliments HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "userReceiverId": "fe7a7003-394b-420f-a2ee-8f45376b0306",
+  "tagId": "969cff13-7889-4f8f-8dd4-56f152ac88ce",
+  "message": "Nice guy"
+}

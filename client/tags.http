@@ -1,0 +1,15 @@
+@host = http://localhost:3000/tags
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5EdWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTE0MjAwNTcsImV4cCI6MTY1MTUwNjQ1Nywic3ViIjoiMjBjZGE5NzgtOWM0Ny00NjJhLWFiNjgtMjIyYTg3NjI0ODIwIn0.fSKAyoZOktFtAdGG8Jiuypx8O_XQ7zzqhJ0nH9dryrw
+
+### Create tag
+POST  HTTP/1.1
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "name": "Inspiration"
+}
+
+### List Tags
+GET {{host}} HTTP/1.1
+Authorization: {{token}}
